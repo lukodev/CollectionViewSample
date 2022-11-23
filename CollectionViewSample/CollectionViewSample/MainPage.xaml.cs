@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
       {
          _isInitialized = true;
          _strings = new ObservableCollection<string>();
-         for (int i = 0; i < 5000; i++)
+         for (int i = 0; i < 50000; i++)
          {
             _strings.Add($"string {i}");
          }
@@ -32,7 +32,8 @@ public partial class MainPage : ContentPage
    {
       Random random = new Random();
       var randomNumber = random.Next(1, 100);
-      _strings[5] = $"Random number {randomNumber}";
+      //_strings[5] = $"Random number {randomNumber}";
+      _strings.RemoveAt(2);;
    }
 }
 
