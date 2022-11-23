@@ -3,13 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewSample.MainPage">
    <Grid>
-      <Button
-         x:Name="CounterBtn"
+      <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Center">
+         <Button
          Text="Update item"
          SemanticProperties.Hint="Update item"
-         Clicked="HandleOnUpdateItemInCollectionView"
-         VerticalOptions="Start"
-         HorizontalOptions="Center" />
+         Clicked="HandleOnUpdateItemInCollectionView"/>
+      <Button
+         Text="Add item"
+         SemanticProperties.Hint="Update item"
+         Clicked="HandleOnAddItemInCollectionView"/>
+      <Button
+         Text="Remove item"
+         SemanticProperties.Hint="Update item"
+         Clicked="HandleOnRemoveItemInCollectionView"/>
+      </HorizontalStackLayout>
       <CollectionView Margin="0,150,0,0" x:Name="_collectionView"></CollectionView>
    </Grid>
 </ContentPage>

@@ -32,8 +32,19 @@ public partial class MainPage : ContentPage
    {
       Random random = new Random();
       var randomNumber = random.Next(1, 100);
-      //_strings[5] = $"Random number {randomNumber}";
-      _strings.RemoveAt(2);;
+      _strings[5] = $"Random number {randomNumber}";
+   }
+
+   private void HandleOnRemoveItemInCollectionView(object sender, EventArgs e)
+   {
+      _strings.RemoveAt(0); ;
+   }
+
+   private void HandleOnAddItemInCollectionView(object sender, EventArgs e)
+   {
+      Random random = new Random();
+      var randomNumber = random.Next(1, 100);
+      _strings.Add($"Random number {randomNumber}"); ;
    }
 }
 
